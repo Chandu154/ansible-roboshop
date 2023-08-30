@@ -72,7 +72,7 @@
       state: installed
 
   - name: load catlogue data into mongodb
-    ansible.builtin.command: --host mongodb1.joindevops.store	</app/schema/catalogue.js
+    ansible.builtin.command: --host mongodb1.joindevops.store	< /app/schema/catalogue.js
 
   - name: restart and enable catalogue
     ansible.builtin.service:
