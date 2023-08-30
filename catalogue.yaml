@@ -26,3 +26,6 @@
       path: /app
     register: directory          
 
+  - name: print the directory stats
+    ansible.builtin.debug:
+      msg: "output: {{directory}}"
