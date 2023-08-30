@@ -50,6 +50,32 @@
   - name: install dependencies
     ansible.builtin.command: npm install 
     args:
-      chdir:  /app       
+      chdir:  /app 
 
-        
+  - name: copy catalogue.service
+    ansible.builtin.copy:
+      src: catalogue.service
+      dest: /etc/systemd/system/catalogue.service
+
+  - name: demon reload
+    ansible.builtin.systemd:
+      daemon_reload: true  
+
+  - name: copy mango.repo to yum.repos.d
+    ansible.builtin.copy:
+      src: mongo.repo
+      dest: /etc/yum.repos.d/mongo.repo 
+
+  - name: Install Mongodb
+    ansible.builtin.yum:
+      name: mongodb-org-shell
+      state: installed
+
+  - name: load catlogue data into mongodb
+    ansible.builtin.command: --host mongodb1.joindevops.store	</app/schema/catalogue.js
+
+  - name: restart and enable catalogue
+    ansible.builtin.service:
+      name: catalogue
+      state: restarted
+      enabled: yes   
