@@ -1,5 +1,6 @@
 - name: Install mongodb componet
   hosts: mongodb
+  become: yes
   tasks:
   - name: copy mango.repo to yum.repos.d
     ansible.builtin.copy:
