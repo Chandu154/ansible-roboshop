@@ -12,11 +12,17 @@
 
   - name: checking exists roboshop user
     ansible.builtin.command: id roboshop
-      rigister: out
-      ignore_errors: true
+    register: out
+    ignore_errors: true
 
-  - when: out.rc != 0 
-    name: create user roboshop
+  #when: out.rc != 0 
+  - name: create user roboshop
+    when: out.rc != 0
     ansible.builtin.user: 
-      name: roboshop   
+      name: roboshop
+
+  - name: checl/ app directory exists or not 
+    ansible.builtin.stat:
+      path: /app
+    register: directory          
 
