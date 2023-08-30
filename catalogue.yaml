@@ -72,7 +72,7 @@
       state: installed
 
   - name: load catlogue data into mongodb
-    ansible.builtin.command: mongo --host 172.31.43.81 < /app/schema/catalogue.js
+    ansible.builtin.command: mongo --host 172.31.34.96 < /app/schema/catalogue.js
 
   - name: restart and enable catalogue
     ansible.builtin.service:
