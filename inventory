@@ -1,8 +1,8 @@
 [mongodb]
-mongodb1.joindevops.store	
+172.31.34.96	
 
 [catalogue]
 
-catalogue.joindevops.store	
+172.31.42.191	
 [web]
-web.joindevops.store	 
+172.31.45.241	 
