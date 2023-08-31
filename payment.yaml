@@ -59,7 +59,7 @@
   - name: enable and start payment
     ansible.builtin.service:
       name: payment
-      state: start
+      state: started
       enabled: yes
 
         
