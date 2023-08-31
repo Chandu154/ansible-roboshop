@@ -6,10 +6,10 @@
     ansible.builtin.yum:
       name: "{{item}}"
       state: installed
-      loop:
-      - python36
-      - gcc
-      - python3-devel
+    loop:
+    - python36
+    - gcc
+    - python3-devel
 
   - name: check  user roboshop exists or not
     ansible.builtin.command: id roboshop
