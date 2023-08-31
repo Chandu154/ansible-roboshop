@@ -20,7 +20,7 @@
   - name: check the directory exists or not
     ansible.builtin.stat:
       path: /app
-      rigister: directory
+    rigister: directory
 
   - name: print the directory state
     ansible.builtin.debug:
