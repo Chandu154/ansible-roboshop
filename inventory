@@ -1,31 +1,31 @@
 [mongodb]
-172.31.32.117	
+mongodb.joindevops.store
 
 [catalogue]
 
-172.31.34.190
-
+catalogue.joindevops.store	
 [web]
-54.83.177.106
+
+web.joindevops.store	
 
 [redis]
-172.31.43.75
+redis.joindevops.store
 
 [user]
-172.31.47.155
+user.joindevops.store
 
 [cart]
-172.31.32.213
+cart.joindevops.store
 
 [mysql]
-172.31.38.69
+mysql.joindevops.store	
 
 [shipping]
-172.31.39.180
+shipping.joindevops.store	
 
 [rabbitmq]
 
-172.31.44.37
+rabbitmq.joindevops.store	
 
 [payment]
-172.31.46.198
+payment.joindevops.store	
