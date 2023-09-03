@@ -72,7 +72,7 @@
       state: installed
 
   - name: load catlogue data into mongodb
-    ansible.builtin.command: mongo --host 172.31.32.117 < /app/schema/user.js
+    ansible.builtin.command: mongo --host mongodb.joindevops.store < /app/schema/user.js
 
   - name: restart and enable user
     ansible.builtin.service:
